@@ -157,7 +157,7 @@ document.getElementById("BotonIngresar").addEventListener("click", function(){
             nombre= data.nombre;
             correo=data.correo;
             ingreso.style.display="none";
-            principal.style.display="block";
+            principal.style.display="none";
             document.getElementById("mensajes").style.display="block";
             redactar.style.display="block"
             nombreP.innerHTML=nombre;
