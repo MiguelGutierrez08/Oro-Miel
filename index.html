@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8"> <!-- COMENTARIO -->
+        <meta name="viewport" content="width=device-with, initial-scale=1, viewport-fit=cover">
+        <link rel="manifest" href="/manifest.json"/>
+        <meta name="theme-color" content="#fff"/>
+        <link rel="stylesheet" type="text/css" href="css/app.css" /> <!--stylesheet enlaza hoja de archivos--> 
+        <script src="js/feather.min.js"></script>
+    </head> 
+
+
+    
+    <body> <!--Contiene todo lo que aparecera en pantalla-->
+        <div id="ingreso">  
+            <span id="titulo">Cafeteria Oro & Miel</span>
+            <br>
+            Correo: 
+            <input type="email" name="correo" id="correo" />
+            <br>
+            Contraseña: 
+            <input type="password" name="contrasena" id="contrasena"  /> 
+            <br>
+            <button id="BotonIngresar" class="btn">Ingresar</button>
+            <br>
+            <span id="btnRegistrar">Registrate</span>
+       </div>
+
+
+
+       <div id="registro">
+        Correo
+        <input type="email" id="correoR">
+        <br>
+        Nombre
+        <input type="text" id="nombreR">
+        <br>
+        Contraseña
+        <input type="password" id="contrasenaR">
+        <br>
+        Confirmar contraseña
+        <input type="password" id="confirmacionR">
+        <br>
+        Fecha de nacimiento
+        <input type="date" id="fechaR">
+        <button id="btnRegistro" class="btn">Registrar</button>
+
+        </div>
+
+        <div id="principal">
+            <div id="menu"><span id="botnMenu" onclick="abrirBarra()"><i data-feather="align-justify"></i></span></div>
+            <div class="titulo">Cafeteria Oro & Miel</div><br>
+            <div id="bienvenida">Bienvenido <span id="nombreP"></span></div>
+            
+        <div id="redactar">
+                Para:<br>
+                <input type="text" id="correoM" />
+                <br>
+                Mensaje:<br>
+                <textarea id="mensajeM"></textarea>
+                <br>
+                <button id="enviarM" class="btnEnviar">Enviar</button>
+        </div>
+        <div id="mensajes">
+            <span id="mensajes"></span><br>
+        </div>
+
+        <div id="camara">
+            <div class="container-photo">
+                <img id="photo" class="photo">
+            </div>
+            <input type="file" accept="image/*" capture="camera" id="camera" class="inputget"/>
+            <button id="open">Foto</button>
+            <button id="mapa">Mapa</button>
+            <input id="lugar" type="text">
+        </div>
+        
+        <div id="barraMenu" class="menu">   
+            <a href="javascript:void(0)" class="botonCerrar" onclick="cerrarBarra()">&times;</a>
+            <a href="javascript:void(0)" onclick="mensajes()"class="opciones"><i data-feather="mail"></i>&nbsp;Mensajes</a><br>
+            <a href="javascript:void(0)" onclick="tomarFoto()" class="opciones">Fotos</a><br>
+            <a href="javascript:void(0)" onclick="cerrarSesion()" class="opciones">Cerrar Sesión</a><br>
+        </div>
+
+        <script src="js/app.js"></script>
+        <script>
+            feather.replace()
+        </script>
+    </body>
+</html>
