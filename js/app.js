@@ -25,8 +25,8 @@ window.onload=function(){
 
 if(localStorage.getItem("login") !=="1"){
     ingreso.style.display="block";
-    principal.style.display="block";
-    redactar.style.display="block";
+    principal.style.display="none";
+    redactar.style.display="none";
     document.getElementById("camara").style.display="none";
 }
 else{
@@ -157,7 +157,7 @@ document.getElementById("BotonIngresar").addEventListener("click", function(){
             nombre= data.nombre;
             correo=data.correo;
             ingreso.style.display="none";
-            principal.style.display="block";
+            principal.style.display="none";
             document.getElementById("mensajes").style.display="block";
             redactar.style.display="block"
             nombreP.innerHTML=nombre;
@@ -331,3 +331,12 @@ document.getElementById("mapa").addEventListener("click", function(){
 
         
 });
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('../sw.js').then( () => {
+        console.log('Service Worker Registered')
+      });
+    });
+  }
+  
